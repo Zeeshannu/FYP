@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selectitem_screen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="2.7"
+        android:orientation="vertical"
+        ></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            ></LinearLayout>
+
+        <Spinner
+
+            android:id="@+id/spinnerfoodCategory"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:entries="@array/food_Category"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/listview"
+        android:layout_weight="8"
+        android:layout_below="@+id/spinnerfoodCategory"
+        android:layout_marginTop="10dp"></ListView>
+
+
+
+
+
+</LinearLayout>

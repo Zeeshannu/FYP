@@ -1,0 +1,141 @@
+<resources>
+
+    <string name="app_name">PocketI2Diet</string>
+    <string-array name="dot_active">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </string-array>
+
+    <string-array name="dot_Inactive">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </string-array>
+
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="what_you_like_to_eat">What You Like To Eat</string>
+    <string name="bralkfast_food_is_selected_and_deliciious">bralkfast food is selected and deliciious</string>
+    <string name="dinner">dinner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_weather">Weather Information</string>
+    <string name="strCity">Sydney</string>
+    <string name="strWeather">Sunny</string>
+    <string name="strTemp">32°C</string>
+    <string name="txtTemp">Temp</string>
+    <string name="strWindSpeed">5kmph</string>
+    <string name="txtWindSpeed">WindSpeed</string>
+    <string name="Separator">---</string>
+    <string name="loading">Loading…</string>
+
+    <string-array name="Physical_Activity">
+        <item>Physical Activity Factor</item>
+        <item>Sedentary (little or no exercise)</item>
+        <item>Lightly active (light exercise)</item>
+        <item>Moderately active (moderate exercise)</item>
+        <item>Very active (hard exercise)</item>
+        <item>Extra active (very hard exercise)</item>
+    </string-array>
+    <string name="generate">generate</string>
+    <string-array
+        name="food_Category">
+        <item>Food Categroy</item>
+        <item>baby foods</item>
+        <item>baked products</item>
+        <item>beef products</item>
+        <item>beverages</item>
+        <item>breakfast cereals</item>
+        <item>cereal grains and pasta</item>
+        <item>dairy products</item>
+        <item>desserts</item>
+        <item>ethnic foods</item>Drinks
+        <item>fast foods</item>
+        <item>fats and oils</item>
+        <item>finfish and shellfish products</item>
+        <item>fruits and fruit juices</item>
+        <item>lamb veal and game products</item>
+        <item>main dishes</item>
+        <item>meals entrees and sidedishes</item>
+        <item>nut and seed products</item>
+        <item>pasta</item>
+        <item>pork products</item>
+        <item>poultry products</item>
+        <item>protein shakes</item>
+        <item>restaurant foods</item>
+        <item>sandwiches</item>
+        <item>sausages and luncheon meats</item>
+        <item>snacks</item>
+        <item>soups sauces and gravies</item>
+        <item>soy and legume products</item>
+        <item>spices and herbs</item>
+        <item>sweets</item>
+        <item>vegetables and vegetable products</item>
+
+
+    </string-array>
+
+
+    <string-array name="Goal">
+        <item>Select Future Goal</item>
+        <item>Sedentary (little or no exercise)</item>
+        <item>Lightly active (light exercise)</item>
+        <item>Moderately active (moderate exercise)</item>
+        <item>Very active (hard exercise)</item>
+        <item>Extra active (very hard exercise)</item>
+    </string-array>
+
+    <string name="action_settings">Settings</string>
+    <string name="date_label_set">Press the button to set the date</string>
+    <string name="date_button_set">Set Date</string>
+    <string name="date_view_set">The Date is: </string>
+    <string name="date_selected"></string>
+    <string name="name">Name</string>
+    <string name="conform_password">Conform Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="login">LogIn</string>
+    <string name="sign_up">sign Up</string>
+    <string name="are_you">Are You</string>
+    <string name="save_continue"><![CDATA[Save & Continue]]></string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="email_display_here">Email Display Here</string>
+    <string name="log_out">Log Out</string>
+    <string name="name_display_here">Name Display Here</string>
+    <string name="next">Next</string>
+    <string name="age">Age</string>
+    <string name="height_in_cm">Height In cm</string>
+    <string name="weight_in_kg">Weight In Kg</string>
+
+    <string name="bmitextview">bmiTextView</string>
+    <string name="bee">BEE</string>
+    <string name="save">Save</string>
+    <string name="sign_in">Sign In</string>
+    <string name="cancel">Cancel</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="bmi">BMI</string>
+    <string name="beeText">BEE</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="gender">Gender</string>
+    <string name="weight_in_kg_10_to_250">weight_in_kg(10 to 250)</string>
+    <string name="height_in_cm_55_to_246">height_in_cm(55 to 246)</string>
+
+</resources>

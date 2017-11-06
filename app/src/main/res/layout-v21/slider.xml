@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+   <android.support.v4.view.ViewPager
+       android:id="@+id/view_pager"
+       android:layout_width="match_parent"
+       android:layout_height="1px"
+       android:layout_above="@+id/view"
+       android:layout_weight="9" >
+
+   </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#fcfdfd"
+
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:alpha="0.5"
+        android:layout_above="@id/layoutDots"
+        android:background="@android:color/holo_blue_light"
+        android:id="@+id/view"></View>
+
+
+    <RelativeLayout
+        android:id="@+id/btnGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="1"
+        android:background="@drawable/buttonimage"
+        android:foregroundGravity="center">
+
+        <TextView
+            android:id="@+id/textButon"
+            android:layout_width="130dp"
+            android:layout_height="20dp"
+
+            android:background="@drawable/buttontext"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

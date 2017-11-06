@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1097834940861",
+    "firebase_url": "https://authentication-808fd.firebaseio.com",
+    "project_id": "authentication-808fd",
+    "storage_bucket": "authentication-808fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097834940861:android:f51615822f583b72",
+        "android_client_info": {
+          "package_name": "com.example.zeeshan.authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097834940861-jk81oop99f05dhevv4gt1el51g7b4qcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zeeshan.authentication",
+            "certificate_hash": "04db1e9d1a8079d2f3356b43df9c6adc30b16f5b"
+          }
+        },
+        {
+          "client_id": "1097834940861-dnvunv766u0u77k1jdkhs32o14cuis8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUaoU_bra2L4InXeL0sRX37ZzvtOa4boU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097834940861-dnvunv766u0u77k1jdkhs32o14cuis8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097834940861:android:d9a69b41a40e3157",
+        "android_client_info": {
+          "package_name": "com.example.zeeshan.tablename"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097834940861-82rvnfahhr7tqokg4lu4d59hef2eal50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zeeshan.tablename",
+            "certificate_hash": "04db1e9d1a8079d2f3356b43df9c6adc30b16f5b"
+          }
+        },
+        {
+          "client_id": "1097834940861-dnvunv766u0u77k1jdkhs32o14cuis8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUaoU_bra2L4InXeL0sRX37ZzvtOa4boU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097834940861-dnvunv766u0u77k1jdkhs32o14cuis8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

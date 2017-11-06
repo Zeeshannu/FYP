@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/mainMenu3"
+        android:title=" "
+        android:visible="false"
+        android:enabled="false"
+        ></item>
+    <item
+        android:id="@+id/mainMeneu"
+        android:title="Main Menu"
+        android:visible="false"
+
+        >
+        </item>
+    <item
+        android:id="@+id/mainMeneu4"
+        android:title=" "
+        android:enabled="false"
+        ></item>
+
+    <item
+        android:id="@+id/generateDiet"
+        android:title="Generate Diet Plan"
+        android:icon="@drawable/mealplan"
+
+        >
+
+    </item>
+    <item
+        android:id="@+id/space1"
+        android:title=" "
+        android:enabled="false"
+
+        ></item>
+    <item
+        android:id="@+id/viewPlan"
+        android:title="View Diet Plan"
+        android:icon="@drawable/viewplan"
+        >
+
+    </item>
+    <item
+        android:id="@+id/space2"
+        android:title=" "
+        android:enabled="false"
+
+        ></item>
+
+    <item
+    android:id="@+id/progressIndicator"
+    android:title="Progress Indicator"
+    android:icon="@drawable/progress"
+    >
+</item>
+    <item
+        android:id="@+id/space6"
+        android:title=" "
+        android:enabled="false"
+
+
+        ></item>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/user_add"
+        >
+    </item>
+
+    <item
+        android:id="@+id/space"
+        android:title=" "
+        android:enabled="false"
+
+
+        ></item>
+
+
+    <item
+        android:id="@+id/help"
+        android:title="Contact Us"
+        android:icon="@drawable/search"
+        >
+
+    </item>
+    <item
+        android:id="@+id/space4"
+        android:title=" "
+        android:enabled="false"
+
+        ></item>
+    <item
+        android:id="@+id/aboutUs"
+        android:title="About Us"
+        android:icon="@drawable/rolextransparent"
+        >
+
+    </item>
+
+    <item
+        android:id="@+id/space10"
+        android:title=" "
+        android:enabled="false"
+
+        ></item>
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/logout"
+        >
+
+    </item>
+
+</group>
+</menu>

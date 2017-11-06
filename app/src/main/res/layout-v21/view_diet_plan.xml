@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dietplan_screen">
+
+
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:orientation="vertical"
+        android:layout_weight="0.25"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:orientation="vertical"
+        android:layout_weight="4"
+        >
+
+        <LinearLayout
+            android:id="@+id/BTNlunch"
+
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.8"
+
+            android:orientation="horizontal"
+
+
+ >
+
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="2"
+                android:orientation="horizontal"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.6"
+
+                android:id="@+id/refreshBreakfast"
+                android:background="@drawable/refresh_back">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/refresh_icon"></RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.1">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewBreakfast"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.7">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TVbreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+
+            android:padding="5dp"
+            android:text="@string/bralkfast_food_is_selected_and_deliciious"
+            android:textColor="#000000" />
+
+
+        <LinearLayout
+            android:id="@+id/BTNdinner"
+
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.8"
+
+            android:orientation="horizontal"
+
+
+            >
+
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="2"
+                android:orientation="horizontal"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.6"
+
+                android:id="@+id/refreshLunch"
+                android:background="@drawable/refresh_back">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/refresh_icon"></RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.1">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewLunch"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.7">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TVlunch"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            android:text="Lunch food is selected  and deliciious "
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:id="@+id/BTNbreakfast"
+
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.8"
+
+            android:orientation="horizontal"
+
+
+            >
+
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="2"
+                android:orientation="horizontal"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.6"
+                android:background="@drawable/refresh_back"
+                android:id="@+id/refreshDinner">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/refresh_icon"></RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.1">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewDinner"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:layout_weight="0.7">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TVdinner"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            android:text="Dinner food is selected  and deliciious "
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="0.3">
+
+        <Button
+            android:id="@+id/BTNgenerate"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_login"
+            android:text="Done"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:orientation="vertical"
+        android:layout_weight="0.15"
+        />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@drawable/query">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+
+        >
+
+        <TextView
+            android:text="Subject"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_weight=".3"
+            android:layout_gravity="center"
+            android:textColor="#fffefd"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_margin="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:id="@+id/editTextSubject"
+            android:layout_weight=".7"
+            android:textColor="#fffefd"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            android:textColorHint="#fffefd"
+            android:hint="Add Subject Here" />
+
+        <TextView
+            android:text="Query"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+
+            android:layout_weight=".3"
+            android:layout_gravity="center"
+            android:textColor="#fffefd"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_margin="15dp" />
+
+        <EditText
+            android:lines="4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:id="@+id/editTextMessage"
+            android:layout_weight="1"
+            android:textColor="#fffefd"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            android:textColorHint="#fffefd"
+            android:hint="Add Query Here" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:id="@+id/buttonSend"
+            android:text="Send"
+            android:layout_weight=".4"
+            android:background="@drawable/btn_login"
+            android:textColor="#fffefd"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="17dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_weight="1.5"></LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

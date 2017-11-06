@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="8dp"
+    android:background="@drawable/profile_screen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="3.6"
+        android:orientation="vertical"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:orientation="horizontal"
+        android:layout_weight="4.7">
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout2"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+             android:orientation="vertical"
+          >
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+
+            android:orientation="vertical"
+            android:id="@+id/linearLayout"
+           >
+
+            <TextView
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="Name"
+
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:inputType="textPersonName"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="0.5"
+                android:orientation="vertical"></LinearLayout>
+            <TextView
+                android:id="@+id/bodytypeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@null"
+
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:inputType="textPersonName"
+
+                android:text="BodyType" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="0.5"
+                android:orientation="vertical"></LinearLayout>
+            <TextView
+                android:id="@+id/heightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@null"
+
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:inputType="textPersonName"
+
+                android:text="@string/height_in_cm" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="0.5"
+                android:orientation="vertical"></LinearLayout>
+            <TextView
+                android:id="@+id/weightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@null"
+
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:inputType="textPersonName"
+                android:text="@string/weight_in_kg" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="0.5"
+                android:orientation="vertical"></LinearLayout>
+            <TextView
+                android:id="@+id/bmiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@null"
+
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:inputType="textPersonName"
+                android:text="@string/bmi" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="0.5"
+                android:orientation="vertical"></LinearLayout>
+            <TextView
+
+                android:id="@+id/beeEditText"
+
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@null"
+
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:inputType="textPersonName"
+                android:text="Bee"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:onClick="goHome"
+            android:text="@string/save"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>
