@@ -368,7 +368,6 @@ class  BackgroundTaskGetJson extends AsyncTask<String ,Void,Boolean> {
             httpURLConnection.setDoOutput(true);
 
             // add parameter to our above url
-
             Uri.Builder builder = new Uri.Builder().appendQueryParameter("table", searchQuery);
             String query = builder.build().getEncodedQuery();
 

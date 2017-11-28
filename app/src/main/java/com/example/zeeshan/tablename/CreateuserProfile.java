@@ -88,8 +88,9 @@ public class CreateuserProfile extends AppCompatActivity {
 
                // On selecting a spinner item
                activityLevel = adapterView.getItemAtPosition(position).toString();
-                Toast.makeText(CreateuserProfile.this, "spinner "+activityLevel, Toast.LENGTH_SHORT)
-                      .show();
+             //   Toast.makeText(CreateuserProfile.this, "spinner "+activityLevel, Toast
+               //     .LENGTH_SHORT)
+                 //     .show();
 
           }
 

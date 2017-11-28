@@ -1,5 +1,8 @@
 package com.example.zeeshan.tablename;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+
 import java.io.IOException;
 import java.net.CookieManager;
 import java.net.CookiePolicy;
@@ -18,6 +21,7 @@ public class HttpClientWrapper {
     }
     private OkHttpClient _client;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public String httpGet(String url) throws IOException {
         Request request = new Request.Builder().url(url).build();
         try(Response response = _client.newCall(request).execute()) {

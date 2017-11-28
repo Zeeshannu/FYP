@@ -18,7 +18,7 @@ public class Session
 
     public static String IPV4="tezkamayi.tk";
 
-    //http://tezkamayi.tk/test_getTable.php";
+     //http://tezkamayi.tk/test_getTable.php";
     public  static   int breakfast_SEL_CAT=0;
 
     public  static FoodselectionCategory breakfastSC_0=new FoodselectionCategory();
