@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -47,7 +48,7 @@ public class CreateuserProfile extends AppCompatActivity {
     RadioGroup genderRadio_group;
     RadioButton selectedRadioButton;
     EditText Name,Age,Height,Weight,Bmi;
-    int height = 0, weight = 0, age = 0,bmi=0;
+    int height = 0, weight = 0, age = 0,bmi=0,bee=0;
     RelativeLayout saveButton;
     String activityLevel;
     Spinner SPINNER;
@@ -115,7 +116,6 @@ public class CreateuserProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 Age = (EditText) findViewById(R.id.ageEditText);
                 Height = (EditText) findViewById(R.id.heightEditText);
                 Weight = (EditText) findViewById(R.id.weightEditText);
@@ -130,14 +130,11 @@ public class CreateuserProfile extends AppCompatActivity {
                 String gender = selectedRadioButton.getText().toString();
 
 
-
-
-
                 //spinner
 
 
-               // Toast.makeText(getApplicationContext(), "Radio Button  " + gender, Toast.LENGTH_LONG)
-                   //     .show();
+                // Toast.makeText(getApplicationContext(), "Radio Button  " + gender, Toast.LENGTH_LONG)
+                //     .show();
 
                 //String ageString=Age.getText().toString();
                 //Toast.makeText(getApplicationContext()," "+ageString,Toast.LENGTH_SHORT).show();
@@ -145,109 +142,138 @@ public class CreateuserProfile extends AppCompatActivity {
                 // female 2131558565
                 boolean ageFlag = false, heighthFlag = false, weightFlag = false;
 
+                String ageS = Age.getText().toString();
+                if (TextUtils.isEmpty(ageS)) {
+                    Age.setError("Enter Age First");
+                    Age.requestFocus();
+                    return;
+                }
 
                 String heightS = Height.getText().toString();
-                String ageS = Age.getText().toString();
+                if (TextUtils.isEmpty(heightS)) {
+                    Height.setError("Enter Height First");
+                    Height.requestFocus();
+                    return;
+                }
                 String weightS = Weight.getText().toString();
-
-                String bmiS=Bmi.getText().toString();
-                if (heightS.equals("") || heightS.equals(" ") || ageS.equals(null) || ageS.equals("") || ageS.equals(" ") || heightS.equals(null) || weightS.equals("") || weightS.equals(" ") || weightS.equals(null)) {
-                    Toast.makeText(getApplicationContext(), "Enter required details please", Toast.LENGTH_SHORT).show();
-
-                }
-                else {
-                    height = Integer.parseInt(heightS);
-                    age = Integer.parseInt(ageS);
-                    weight = Integer.parseInt(weightS);
-                    bmi = Integer.parseInt(bmiS);
-                    beeP= String.valueOf(beecalculator(height,weight,age,gender));
-                    bodyTypeP= String.valueOf(bodytype(bmi));
-                 //   Toast.makeText(getApplicationContext(), "Enter height betwee " + weight +age + height + String.valueOf(heightvalidater(height)+String.valueOf(weightvalidater(weight))+String.valueOf(agevalidater(age))), Toast.LENGTH_SHORT).show();
-
-                    if (!heightvalidater(height)) {
-
-
-                        Toast.makeText(getApplicationContext(), "Enter height between 55cm & 246cm " + heightS + height + String.valueOf(heightvalidater(height)), Toast.LENGTH_SHORT).show();
-
-                    } else if (!agevalidater(age)) {
-                        Toast.makeText(getApplicationContext(), "Enter age between 6 TO 100 YEARS", Toast.LENGTH_SHORT).show();
-
-
-                    } else if (!weightvalidater(weight)) {
-                        Toast.makeText(getApplicationContext(), "Enter weight between 10kg & 250kg ", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        Intent intent = new Intent(getApplicationContext(), CompleteProfile.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("Name", Name.getText().toString());
-                        bundle.putInt("Height", height);
-                        bundle.putInt("Weight", weight);
-                        bundle.putInt("Age", age);
-                        bundle.putString("GenderText", gender);
-                        bundle.putInt("Gender", selectedRadioButtonId);
-                        bundle.putInt("BMI", bmi);
-                        bundle.putString("activity",activityLevel);
-
-                        intent.putExtras(bundle);
-                        startActivity(intent);
-                        try {
-
-                            //receiving result from signup class.
-                            String result = new InsertProfile().execute(Name.getText().toString(),heightS,weightS,ageS,gender, bmiS).get();
-
-                            if (result != null) {
-                               // Toast.makeText(getApplicationContext(), "wait:"+beeP+selectedRadioButtonId, Toast.LENGTH_SHORT).show();
-
-                                JSONObject jsonObject = new JSONObject(result);
-                                String response = (String) jsonObject.getString("result");
-                                Toast.makeText(getApplicationContext(), "User Profile is Created:", Toast.LENGTH_SHORT).show();
-                                bundle = new Bundle();
-                                bundle.putString("Name", Name.getText().toString());
-                                bundle.putInt("Height", height);
-                                bundle.putInt("Weight", weight);
-                                bundle.putInt("Age", age);
-                                bundle.putString("GenderText", gender);
-                                bundle.putInt("Gender", selectedRadioButtonId);
-                                bundle.putInt("BMI", bmi);
-                                bundle.putString("activity",activityLevel);
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                                if (response.equals(SUCCESS_MSG)||response.equals("1")) {
-                                    Toast.makeText(getApplicationContext(), "User Profile is Created:", Toast.LENGTH_SHORT).show();
-                                    bundle = new Bundle();
-                                    bundle.putString("Name", Name.getText().toString());
-                                    bundle.putInt("Height", height);
-                                    bundle.putInt("Weight", weight);
-                                    bundle.putInt("Age", age);
-                                    bundle.putString("GenderText", gender);
-                                    bundle.putInt("Gender", selectedRadioButtonId);
-                                    bundle.putInt("BMI", bmi);
-                                    bundle.putString("activity",activityLevel);
-                                    intent.putExtras(bundle);
-                                    startActivity(intent);
-                                } else if (response.equals(CONNECTION_FAILED_MSG)||response.equals("0")) {
-                                    Toast.makeText(getApplicationContext(), "Couldn't connect to remote database.", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        } catch (ExecutionException e) {
-                            e.printStackTrace();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-
-
+                if (TextUtils.isEmpty(weightS)) {
+                    Weight.setError("Enter Weight First");
+                    Weight.requestFocus();
+                    return;
                 }
 
 
+                //this is the result from camera
+                //String bmiS=Bmi.getText().toString();
 
-            }
+
+                height = Integer.parseInt(heightS);
+                age = Integer.parseInt(ageS);
+                weight = Integer.parseInt(weightS);
+                //bmi = Integer.parseInt(bmiS);
+                //  Toast.makeText(getApplicationContext(),
+                // "Enter height betwee " + weight +age + height
+                // + String.valueOf(heightvalidater(height)
+                // +String.valueOf(weightvalidater(weight))
+                // +String.valueOf(agevalidater(age))), Toast.LENGTH_SHORT).show();
+
+                if (!heightvalidater(height)) {
+                    Toast.makeText(getApplicationContext(), "Enter height between 55cm & 246cm " + heightS + height + String.valueOf(heightvalidater(height)), Toast.LENGTH_SHORT).show();
+                    Height.setError("Enter height between 55cm & 246cm ");
+                    Height.requestFocus();
+                    return;
+
+                } else if (!agevalidater(age)) {
+                    Toast.makeText(getApplicationContext(), "Enter age between 6 TO 100 YEARS", Toast.LENGTH_SHORT).show();
+                    Age.setError("Enter age between 6 & 100 Years");
+                    Age.requestFocus();
+                    return;
+
+
+                } else if (!weightvalidater(weight)) {
+                    Toast.makeText(getApplicationContext(), "Enter weight between 10kg & 250kg ", Toast.LENGTH_SHORT).show();
+                    Weight.setError("Enter weight between 10kg & 250kg ");
+                    Weight.requestFocus();
+                    return;
+
+
+                } else {
+                    bmi = bmicalculator(height, weight);
+                    bee = beecalculator(height, weight, age, gender);
+                    beeP = String.valueOf(beecalculator(height, weight, age, gender));
+                    bodyTypeP = String.valueOf(bodytype(bmi));
+
+                    Intent intent = new Intent(getApplicationContext(), CompleteProfile.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("Name", Name.getText().toString());
+                    bundle.putInt("Height", height);
+                    bundle.putInt("Weight", weight);
+                    bundle.putInt("Age", age);
+                    bundle.putString("GenderText", gender);
+                    bundle.putInt("Gender", selectedRadioButtonId);
+                    bundle.putInt("BMI", bmi);
+                    bundle.putInt("BEE", bee);
+                    bundle.putString("activity", activityLevel);
+
+
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+
+//                    try {
+//
+//                        //receiving result from signup class.
+//                        String result = new InsertProfile().execute(Name.getText().toString(), heightS, weightS, ageS, gender, bmiS).get();
+//
+//                        if (result != null) {
+//                            // Toast.makeText(getApplicationContext(), "wait:"+beeP+selectedRadioButtonId, Toast.LENGTH_SHORT).show();
+//
+//                            JSONObject jsonObject = new JSONObject(result);
+//                            String response = (String) jsonObject.getString("result");
+//                            Toast.makeText(getApplicationContext(), "User Profile is Created:", Toast.LENGTH_SHORT).show();
+//                            bundle = new Bundle();
+//                            bundle.putString("Name", Name.getText().toString());
+//                            bundle.putInt("Height", height);
+//                            bundle.putInt("Weight", weight);
+//                            bundle.putInt("Age", age);
+//                            bundle.putString("GenderText", gender);
+//                            bundle.putInt("Gender", selectedRadioButtonId);
+//                            bundle.putInt("BMI", bmi);
+//                            bundle.putString("activity", activityLevel);
+//                            intent.putExtras(bundle);
+//                            startActivity(intent);
+//                            if (response.equals(SUCCESS_MSG) || response.equals("1")) {
+//                                Toast.makeText(getApplicationContext(), "User Profile is Created:", Toast.LENGTH_SHORT).show();
+//                                bundle = new Bundle();
+//                                bundle.putString("Name", Name.getText().toString());
+//                                bundle.putInt("Height", height);
+//                                bundle.putInt("Weight", weight);
+//                                bundle.putInt("Age", age);
+//                                bundle.putString("GenderText", gender);
+//                                bundle.putInt("Gender", selectedRadioButtonId);
+//                                bundle.putInt("BMI", bmi);
+//                                bundle.putString("activity", activityLevel);
+//                                intent.putExtras(bundle);
+//                                startActivity(intent);
+//                            } else if (response.equals(CONNECTION_FAILED_MSG) || response.equals("0")) {
+//                                Toast.makeText(getApplicationContext(), "Couldn't connect to remote database.", Toast.LENGTH_SHORT).show();
+//                            } else {
+//                                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+//                            }
+//
+//                        }
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    } catch (ExecutionException e) {
+//                        e.printStackTrace();
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+
+                }
+
+
+
+                }
         });
 
         //int age=Integer.parseInt(Age.getText().toString());
@@ -316,6 +342,7 @@ public class CreateuserProfile extends AppCompatActivity {
             return false;
         }
     }
+
 
 
     public class InsertProfile extends AsyncTask<String, Void, String> {
@@ -390,6 +417,7 @@ public class CreateuserProfile extends AppCompatActivity {
 
         }
     }
+
     public  int bmicalculator(int height,int weight){
 
         float BMI=0;

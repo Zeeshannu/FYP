@@ -147,12 +147,13 @@ public class RegisterNow extends AppCompatActivity {
                     editPass.setError("Enter Password ");
                     editPass.requestFocus();
                     return;
-                } if(password.length()<5)
-                    {
+                }
+                if(password.length()<5)
+                {
                         editPass.setError(" Minimum Password Length 6");
                         editPass.requestFocus();
                         return;
-                    }
+                }
                 if (!isEmailValid(UserID)) {
                     editUserEmail.setError("Enter Valid Email");
                     editUserEmail.requestFocus();
@@ -160,25 +161,35 @@ public class RegisterNow extends AppCompatActivity {
                 }
 
                 backgroundTaskEmailExist EmailCheck=new backgroundTaskEmailExist();
-                EmailCheck.execute(UserID);
-                if(EMAIL_EXISTS_FLAG){
-                    editUserEmail.setError("Email Already Exists");
-                    editUserEmail.requestFocus();
-                    return;
+                try {
+                    EmailCheck.execute(UserID).get();
+                    if(EMAIL_EXISTS_FLAG){
+                        editUserEmail.setError("Email Already Exists");
+                        editUserEmail.requestFocus();
+                        return;
+                    }else if(!EMAIL_EXISTS_FLAG ){
+
+                        backgroundTaskSignUp SignUp=new backgroundTaskSignUp();
+                        SignUp.execute(firstName,lastName,UserID,password).get();
+
+                        if(!SIGNUP_FLAG )
+                        {
+                            Toast.makeText(getApplicationContext(), "Account Created Successfully", Toast.LENGTH_LONG).show();
+                            Intent initializer = new Intent(RegisterNow.this, CreateuserProfile.class);
+                            startActivity(initializer);
+                        }
+                        else
+                            Toast.makeText(RegisterNow.this, "Failed to SignUp", Toast.LENGTH_SHORT)
+                                    .show();
+                    }
+
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
                 }
 
-                backgroundTaskSignUp SignUp=new backgroundTaskSignUp();
-                SignUp.execute(firstName,lastName,UserID,password);
-
-                if(SIGNUP_FLAG && !EMAIL_EXISTS_FLAG )
-                {
-                    Toast.makeText(getApplicationContext(), "Account Created Successfully", Toast.LENGTH_LONG).show();
-                    Intent initializer = new Intent(RegisterNow.this, CreateuserProfile.class);
-                    startActivity(initializer);
-                }
-                else
-                    Toast.makeText(RegisterNow.this, "Failed to SignUp", Toast.LENGTH_SHORT)
-                            .show();
 
 
             }
