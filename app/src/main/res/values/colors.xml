@@ -6,7 +6,7 @@
     <color name="dot_dark_screen1">#f9c232</color>
     <color name="dot_dark_screen2">#f9c232</color>
     <color name="dot_dark_screen3">#f9c232</color>
-
+    <color name="white">#FFFFFF</color>
 
     <color name="dot_light_screen1">#e1dfd9</color>
     <color name="dot_light_screen2">#e1dfd9</color>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -48,7 +49,7 @@ public class CreateuserProfile extends AppCompatActivity {
     RadioGroup genderRadio_group;
     RadioButton selectedRadioButton;
     EditText Name,Age,Height,Weight,Bmi;
-    int height = 0, weight = 0, age = 0,bmi=0,bee=0;
+    int height = 0, weight = 0, age = 0,bmi=0,bee=0,acivityLevelPosition=0;
     RelativeLayout saveButton;
     String activityLevel;
     Spinner SPINNER;
@@ -88,7 +89,9 @@ public class CreateuserProfile extends AppCompatActivity {
                 // Your code here
 
                // On selecting a spinner item
+                acivityLevelPosition=position;
                activityLevel = adapterView.getItemAtPosition(position).toString();
+                Log.i(activityLevel, "activityLevel: "+activityLevel);
              //   Toast.makeText(CreateuserProfile.this, "spinner "+activityLevel, Toast
                //     .LENGTH_SHORT)
                  //     .show();
@@ -200,20 +203,19 @@ public class CreateuserProfile extends AppCompatActivity {
                 } else {
                     bmi = bmicalculator(height, weight);
                     bee = beecalculator(height, weight, age, gender);
-                    beeP = String.valueOf(beecalculator(height, weight, age, gender));
+              //      beeP = String.valueOf(beecalculator(height, weight, age, gender));
                     bodyTypeP = String.valueOf(bodytype(bmi));
 
                     Intent intent = new Intent(getApplicationContext(), CompleteProfile.class);
                     Bundle bundle = new Bundle();
                     bundle.putString("Name", Name.getText().toString());
+                    bundle.putString("BodyType", bodyTypeP);
                     bundle.putInt("Height", height);
-                    bundle.putInt("Weight", weight);
                     bundle.putInt("Age", age);
-                    bundle.putString("GenderText", gender);
-                    bundle.putInt("Gender", selectedRadioButtonId);
+                    bundle.putInt("Weight", weight);
                     bundle.putInt("BMI", bmi);
                     bundle.putInt("BEE", bee);
-                    bundle.putString("activity", activityLevel);
+
 
 
                     intent.putExtras(bundle);
@@ -418,6 +420,7 @@ public class CreateuserProfile extends AppCompatActivity {
         }
     }
 
+
     public  int bmicalculator(int height,int weight){
 
         float BMI=0;
@@ -429,6 +432,7 @@ public class CreateuserProfile extends AppCompatActivity {
     }
 
 
+    //http://www.globalrph.com/harris-benedict-equation.htm
     public int beecalculator(int height,int weight,int age,String genderText){
 
         double BEE=0;
@@ -436,22 +440,42 @@ public class CreateuserProfile extends AppCompatActivity {
         double ageFloat;
         double weightFloat;
 
-        // female 2131558565
-        // male 2131558564
-        //
+
+        // calculation for men (metric)
+        // BEE = 66 + ( 13.7 x weight in kg ) + ( 5 x height in cm ) - ( 6.8 x age in years )
         if(genderText.equals("Male")){
             ageFloat=(float)(age*6.8);
             weightFloat=(float)(weight*13.7);
             height=height*5;
             BEE=(float)(66+ weightFloat+height-ageFloat);
         }
+
+//BMR calculation for women (metric)
+// BMR = 655+ ( 9.6 x weight in kg ) + ( 1.85 x height in cm ) - ( 4.7x age in years )
         if(genderText.equals("Female")){
+
             ageFloat=(float)(age*4.7);
             weightFloat=(float)(weight*9.6);
             float heightfloat=(float) (height*1.8);
             BEE=(float)(665+ weightFloat+heightfloat-ageFloat);
         }
+//
+//<item>Sedentary</item>
+//        <item>Lightly active</item>
+//        <item>Moderately active</item>
+//        <item>Very active</item>
+//        <item>Extra active</item>
 
+        if(acivityLevelPosition==1)
+            BEE=BEE*1.2;
+        else if(acivityLevelPosition==2)
+            BEE=BEE*1.375;
+        else if(acivityLevelPosition==3)
+            BEE=BEE*1.55;
+        else if(acivityLevelPosition==4)
+            BEE=BEE*1.7;
+        else if(acivityLevelPosition==5)
+            BEE=BEE*1.9;
 
         // calculation for men (metric)
         // BEE = 66 + ( 13.7 x weight in kg ) + ( 5 x height in cm ) - ( 6.8 x age in years )

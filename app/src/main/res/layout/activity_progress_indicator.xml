@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.zeeshan.tablename.ProgressIndicator"
+                android:background="@drawable/progressindicator"
+    >
+
+
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/start_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="102dp"
+    android:layout_marginTop="193dp"
+    android:text="TextView"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="102dp"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/goal_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="TextView"
+    android:layout_alignBaseline="@+id/start_weight"
+    android:layout_alignBottom="@+id/start_weight"
+    android:layout_toEndOf="@+id/start_weight"
+    android:layout_marginStart="80dp"
+    android:layout_toRightOf="@+id/start_weight"
+    android:layout_marginLeft="80dp"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/max_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/goal_weight"
+    android:layout_below="@+id/goal_weight"
+    android:layout_marginTop="58dp"
+    android:text="TextView"
+    android:layout_alignLeft="@+id/goal_weight"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/togoal_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/max_weight"
+    android:layout_below="@+id/max_weight"
+    android:layout_marginTop="80dp"
+    android:text="TextView"
+    android:layout_alignLeft="@+id/max_weight"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/average_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/togoal_weight"
+    android:layout_alignEnd="@+id/togoal_weight"
+    android:layout_marginBottom="25dp"
+    android:text="TextView"
+    android:layout_alignRight="@+id/togoal_weight"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/lost_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/average_weight"
+    android:layout_alignEnd="@+id/average_weight"
+    android:layout_marginBottom="9dp"
+    android:text="TextView"
+    android:layout_alignRight="@+id/average_weight"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/minimum_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/max_weight"
+    android:layout_below="@+id/max_weight"
+    android:layout_marginTop="5dp"
+    android:text="TextView"
+    android:layout_alignLeft="@+id/max_weight"/>
+
+<TextView
+    android:textColor="@color/white"
+    android:id="@+id/totallost_weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/togoal_weight"
+    android:layout_below="@+id/togoal_weight"
+    android:layout_marginTop="6dp"
+    android:text="TextView"
+    android:layout_alignLeft="@+id/togoal_weight"/>
+
+
+</RelativeLayout>

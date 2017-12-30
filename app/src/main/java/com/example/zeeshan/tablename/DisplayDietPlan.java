@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class DisplayDietPlan extends AppCompatActivity {
 
+    ImageButton imageButton;
     Button b;
     //updatesd code
     Double totalProtein=0.0 , totalCarbohydrate=0.0, totalFat=0.0,totalBreakfastProtein=0.0 ,
@@ -38,59 +40,72 @@ TextView TVTOTALPROTEIN,TVTOTALFAT,TVTOTALCARBOHYDRATE;
         setContentView(R.layout.activity_display_diet_plan);
 
 
-        b=(Button)findViewById(R.id.saveplan);
-        b.setOnClickListener(new View.OnClickListener() {
+        imageButton=(ImageButton) findViewById(R.id.saveplan);
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Toast.makeText(DisplayDietPlan.this, " save", Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(getApplicationContext(),Initializer.class);
                 startActivity(i);
             }
         });
+
+        //after update
+//        b=(Button)findViewById(R.id.saveplan);
+//        b.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(DisplayDietPlan.this, " save", Toast.LENGTH_SHORT).show();
+//                Intent i=new Intent(getApplicationContext(),Initializer.class);
+//                startActivity(i);
+//            }
+//        });
         //binding the total calories for each cource
+
         TVBREAKFASTCALORIES=(TextView) findViewById(R.id.caloriesbreakfast);
         TVLUNCHCALORIES=(TextView) findViewById(R.id.calorieslunch);
         TVDINNERCALORIES=(TextView) findViewById(R.id.caloriesdinner);
 
 
-        TVLUNCH1=(TextView) findViewById(R.id.lunch1);
-        TVLUNCH2=(TextView) findViewById(R.id.lunch2);
-        TVLUNCH3=(TextView) findViewById(R.id.lunch3);
-        TVLUNCH4=(TextView) findViewById(R.id.lunch4);
-        TVLUNCH5=(TextView) findViewById(R.id.lunch5);
 
-        TVTVLUNCHWEIGHT1=(TextView) findViewById(R.id.lunch1Waitage);
-        TVTVLUNCHWEIGHT2=(TextView) findViewById(R.id.lunch2Waitage);
-        TVTVLUNCHWEIGHT3=(TextView) findViewById(R.id.lunch3Waitage);
-        TVTVLUNCHWEIGHT4=(TextView) findViewById(R.id.lunch4Waitage);
-        TVTVLUNCHWEIGHT5=(TextView) findViewById(R.id.lunch5Waitage);
-
-
-        TVBREAKFAST1=(TextView) findViewById(R.id.breakfast1);
-        TVBREAKFAST2=(TextView) findViewById(R.id.breakfast2);
-        TVBREAKFAST3=(TextView) findViewById(R.id.breakfast3);
-        TVBREAKFAST4=(TextView) findViewById(R.id.breakfast4);
-        TVBREAKFAST5=(TextView) findViewById(R.id.breakfast5);
-
-        TVBREAKFASTWEIGHT1=(TextView) findViewById(R.id.breakfast1Waitage);
-        TVBREAKFASTWEIGHT2=(TextView) findViewById(R.id.breakfast2Waitage);
-        TVBREAKFASTWEIGHT3=(TextView) findViewById(R.id.breakfast3Waitage);
-        TVBREAKFASTWEIGHT4=(TextView) findViewById(R.id.breakfast4Waitage);
-        TVBREAKFASTWEIGHT5=(TextView) findViewById(R.id.breakfast5Waitage);
-
-
-        TVDINNER1=(TextView) findViewById(R.id.dinner1);
-        TVDINNER2=(TextView) findViewById(R.id.dinner2);
-        TVDINNER3=(TextView) findViewById(R.id.dinner3);
-        TVDINNER4=(TextView) findViewById(R.id.dinner4);
-        TVDINNER5=(TextView) findViewById(R.id.dinner5);
-
-        TVDINNERWEIGHT1=(TextView) findViewById(R.id.dinner1Waitage);
-        TVDINNERWEIGHT2=(TextView) findViewById(R.id.dinner2Waitage);
-        TVDINNERWEIGHT3=(TextView) findViewById(R.id.dinner3Waitage);
-        TVDINNERWEIGHT4=(TextView) findViewById(R.id.dinner4Waitage);
-        TVDINNERWEIGHT5=(TextView) findViewById(R.id.dinner5Waitage);
-
+//        TVLUNCH1=(TextView) findViewById(R.id.lunch1);
+//        TVLUNCH2=(TextView) findViewById(R.id.lunch2);
+//        TVLUNCH3=(TextView) findViewById(R.id.lunch3);
+//        TVLUNCH4=(TextView) findViewById(R.id.lunch4);
+//        TVLUNCH5=(TextView) findViewById(R.id.lunch5);
+//
+//        TVTVLUNCHWEIGHT1=(TextView) findViewById(R.id.lunch1Waitage);
+//        TVTVLUNCHWEIGHT2=(TextView) findViewById(R.id.lunch2Waitage);
+//        TVTVLUNCHWEIGHT3=(TextView) findViewById(R.id.lunch3Waitage);
+//        TVTVLUNCHWEIGHT4=(TextView) findViewById(R.id.lunch4Waitage);
+//        TVTVLUNCHWEIGHT5=(TextView) findViewById(R.id.lunch5Waitage);
+//
+//
+//        TVBREAKFAST1=(TextView) findViewById(R.id.breakfast1);
+//        TVBREAKFAST2=(TextView) findViewById(R.id.breakfast2);
+//        TVBREAKFAST3=(TextView) findViewById(R.id.breakfast3);
+//        TVBREAKFAST4=(TextView) findViewById(R.id.breakfast4);
+//        TVBREAKFAST5=(TextView) findViewById(R.id.breakfast5);
+//
+//        TVBREAKFASTWEIGHT1=(TextView) findViewById(R.id.breakfast1Waitage);
+//        TVBREAKFASTWEIGHT2=(TextView) findViewById(R.id.breakfast2Waitage);
+//        TVBREAKFASTWEIGHT3=(TextView) findViewById(R.id.breakfast3Waitage);
+//        TVBREAKFASTWEIGHT4=(TextView) findViewById(R.id.breakfast4Waitage);
+//        TVBREAKFASTWEIGHT5=(TextView) findViewById(R.id.breakfast5Waitage);
+//
+//
+//        TVDINNER1=(TextView) findViewById(R.id.dinner1);
+//        TVDINNER2=(TextView) findViewById(R.id.dinner2);
+//        TVDINNER3=(TextView) findViewById(R.id.dinner3);
+//        TVDINNER4=(TextView) findViewById(R.id.dinner4);
+//        TVDINNER5=(TextView) findViewById(R.id.dinner5);
+//
+//        TVDINNERWEIGHT1=(TextView) findViewById(R.id.dinner1Waitage);
+//        TVDINNERWEIGHT2=(TextView) findViewById(R.id.dinner2Waitage);
+//        TVDINNERWEIGHT3=(TextView) findViewById(R.id.dinner3Waitage);
+//        TVDINNERWEIGHT4=(TextView) findViewById(R.id.dinner4Waitage);
+//        TVDINNERWEIGHT5=(TextView) findViewById(R.id.dinner5Waitage);
+//
 
 
         TVTOTALCARBOHYDRATE=(TextView)findViewById(R.id.totalCarbohydrate);

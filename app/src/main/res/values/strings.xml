@@ -32,11 +32,11 @@
 
     <string-array name="Physical_Activity">
         <item>Physical Activity Factor</item>
-        <item>Sedentary (little or no exercise)</item>
-        <item>Lightly active (light exercise)</item>
-        <item>Moderately active (moderate exercise)</item>
-        <item>Very active (hard exercise)</item>
-        <item>Extra active (very hard exercise)</item>
+        <item>Sedentary</item>
+        <item>Lightly active</item>
+        <item>Moderately active</item>
+        <item>Very active</item>
+        <item>Extra active</item>
     </string-array>
     <string name="generate">generate</string>
     <string-array
@@ -137,5 +137,7 @@
     <string name="gender">Gender</string>
     <string name="weight_in_kg_10_to_250">weight_in_kg(10 to 250)</string>
     <string name="height_in_cm_55_to_246">height_in_cm(55 to 246)</string>
+    <string name="fat">Fat</string>
+    <string name="carbohydrate">Carbohydrate</string>
 
 </resources>
