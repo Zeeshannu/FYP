@@ -16,7 +16,7 @@ public class Session
     //  "https://tezkamayi.tk/add_info.php";
     //public static String IPV4="192.168.1.105";
 
-    public static String IPV4="tezkamayi.tk";
+    public static String IPV4="http://tezkamayi.com/FYP_Zee";//"tezkamayi.tk";
 
      //http://tezkamayi.tk/test_getTable.php";
     public  static   int breakfast_SEL_CAT=0;

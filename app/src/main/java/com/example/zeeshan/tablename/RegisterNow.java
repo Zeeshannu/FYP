@@ -45,7 +45,7 @@ public class RegisterNow extends AppCompatActivity {
     JSONArray person = null;
     boolean SIGNUP_FLAG=false,EMAIL_EXISTS_FLAG=false;
 
-     private static String urlInsertUser = "http://tezkamayi.tk/Insert_User.php";
+    // private static String urlInsertUser = "http://tezkamayi.tk/Insert_User.php";
     private static final String SUCCESS_MSG = "success";
     private static final String CONNECTION_FAILED_MSG = "connection";
     JSONParser jParser = new JSONParser();
@@ -160,19 +160,22 @@ public class RegisterNow extends AppCompatActivity {
                     return;
                 }
 
-                backgroundTaskEmailExist EmailCheck=new backgroundTaskEmailExist();
-                try {
-                    EmailCheck.execute(UserID).get();
-                    if(EMAIL_EXISTS_FLAG){
-                        editUserEmail.setError("Email Already Exists");
-                        editUserEmail.requestFocus();
-                        return;
-                    }else if(!EMAIL_EXISTS_FLAG ){
 
-                        backgroundTaskSignUp SignUp=new backgroundTaskSignUp();
-                        SignUp.execute(firstName,lastName,UserID,password).get();
+                backgroundTaskSignUp SignUp=new backgroundTaskSignUp();
+                         try {
+                             SignUp.execute(firstName,lastName,UserID,password).get();
+                         } catch (InterruptedException e) {
+                             e.printStackTrace();
+                         } catch (ExecutionException e) {
+                             e.printStackTrace();
+                         }
+                         if(!SIGNUP_FLAG){
+                             editUserEmail.setError("Email Already Exists");
+                             editUserEmail.requestFocus();
+                             return;
+                         }
 
-                        if(!SIGNUP_FLAG )
+                       else if(SIGNUP_FLAG )
                         {
                             Toast.makeText(getApplicationContext(), "Account Created Successfully", Toast.LENGTH_LONG).show();
                             Intent initializer = new Intent(RegisterNow.this, CreateuserProfile.class);
@@ -183,16 +186,6 @@ public class RegisterNow extends AppCompatActivity {
                                     .show();
                     }
 
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
-
-            }
         });
 
     }

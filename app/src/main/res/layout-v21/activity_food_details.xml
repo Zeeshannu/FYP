@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
->
+    android:background="@drawable/detail_item" >
 
-
+<!--
     <LinearLayout
         android:id="@+id/mainimage"
         android:layout_width="match_parent"
@@ -177,5 +177,186 @@
         android:layout_height="wrap_content"
         android:text="Cancel &amp; back"
         android:onClick="cancel"/>
+-->
 
-</RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mainimage"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:id="@+id/TVfoodname"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="25dp"
+                    android:hint="TextView"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/TVcalories"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TVfoodname"
+                    android:padding="25dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <Button
+                    android:id="@+id/lipids"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/background"
+                    android:text="Lipids"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/carbohydrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/background"
+                    android:text="Carbohydrate"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"></Button>
+
+                <Button
+                    android:id="@+id/proteins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/background"
+                    android:text="Proteins"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                >
+
+                <Button
+                    android:id="@+id/BTNlipids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundbackground"
+                    android:text="50"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/BTNcarbohydrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundbackground"
+                    android:text="90"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"></Button>
+
+                <Button
+                    android:id="@+id/BTNproteins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundbackground"
+                    android:text="72"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TVfooddescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background"
+                android:padding="10dp"
+                android:text="Food servers perform a variety of tasks, from preparing the food, stocking supplies, serving, charging people for their food, handling cash, credit cards, and a cash register, cleaning tables and counters, resetting tables, greeting customers and answering questions."
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Ok"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainimage"
+
+            android:color="#000000"
+            android:onClick="Add"
+            android:text="Add  to Food"
+
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainimage"
+            android:layout_toRightOf="@+id/Ok"
+
+            android:color="#000000"
+            android:onClick="cancel"
+            android:text="Cancel &amp; back"
+
+            android:textSize="14sp" />
+
+    </RelativeLayout>

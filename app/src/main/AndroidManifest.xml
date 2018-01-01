@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProgressIndicator">
+        <activity android:name=".opening">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,12 +19,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".opening">
+        <activity android:name=".PersonalReminder">
+        </activity>
+        <activity android:name=".DietReminder">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".ProgressIndicator">
         </activity>
         <activity android:name=".DisplayDietPlan">
             <intent-filter>
@@ -136,8 +141,6 @@
             android:label="Home">
         </activity>
         <activity android:name=".FoodCompontnt">
-        </activity>
-        <activity android:name=".DietReminder">
         </activity>
 
         <receiver android:name=".Receiver.NetworkStateChangeReceiver">
